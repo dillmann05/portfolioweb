@@ -1,0 +1,872 @@
+/* Reseteo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --color-disable: rgb(69, 79, 88);
+  --color-hover: rgba(245, 245, 245, 0.815);
+}
+
+/* General */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+  background-color: rgba(238, 237, 237, 0.411);
+  padding-top: 3rem;
+}
+
+body a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbarS {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0.5px 25px;
+  z-index: 10;
+}
+
+.menuNav {
+  width: 100%;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menuNav .list {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.menuNav .list a {
+  color: var(--color-disable);
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.menuNav .list a:hover {
+  color: black;
+}
+
+/* Inicio */
+
+.home {
+  padding-top: 3rem;
+}
+
+.homeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "homeImg homeTxt"
+    "homeBtn homeBtn";
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.homeImg {
+  grid-area: homeImg;
+  border: 1px solid white;
+  box-shadow: -8px 10px;
+  margin: 0 auto;
+}
+
+.homeTxt {
+  grid-area: homeTxt;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.homeTxt h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.homeTxt p {
+  letter-spacing: 0.5px;
+}
+
+.homeBtn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  grid-area: homeBtn;
+  color: white;
+  background-color: var(--color-disable);
+  margin-top: 1rem;
+}
+
+.homeBtn:hover {
+  color: var(--color-hover);
+  background-color: black;
+  border: 2px solid var(--color-disable);
+}
+
+/* Descargar CV */
+.iframeCV {
+  width: 100%;
+  height: 70vh;
+}
+
+.btnModal {
+  background-color: var(--color-disable);
+  color: white;
+}
+
+.homeArrow {
+  display: none;
+}
+/* Sobre Mi */
+
+.aboutMe {
+  padding-top: 3.5rem;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 1fr 1fr;
+  grid-template-areas:
+    "aboutImg"
+    "aboutText";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.aboutMe h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+}
+
+.aboutText {
+  grid-area: aboutText;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.aboutText p {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-style: oblique;
+}
+
+.aboutText p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.aboutBtn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: var(--color-disable);
+  color: white;
+  border-radius: 50px;
+  align-self: end;
+  margin-right: 1rem;
+}
+
+.aboutBtn:hover {
+  background-color: black;
+  color: var(--color-hover);
+}
+
+.aboutImg {
+  grid-area: aboutImg;
+  margin: 0 auto;
+  box-shadow: 1px 2px 0 10px;
+}
+
+/* Habilidades y experiencias */
+.skills {
+  padding-top: 3.5rem;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.skillsIcons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.skillsIco {
+  font-size: 5rem;
+  text-align: center;
+  z-index: -1;
+}
+
+.skillsFormaciones {
+  font-size: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.skillsExp {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.skillsExp h3 {
+  font-weight: bold;
+}
+
+.skillsArrow {
+  background-color: black;
+  width: 1.5rem;
+  height: 13rem;
+  position: relative;
+  top: -1rem;
+  right: -2rem;
+  font-size: 5rem;
+  color: black;
+  z-index: -1;
+}
+
+.skillsArrow ion-icon {
+  position: relative;
+  top: 10rem;
+  right: 1.7rem;
+  z-index: -1;
+}
+
+/* Proyectos */
+.projects {
+  padding-top: 3.5rem;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+  margin-bottom: 1rem;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+}
+
+.projectsCard {
+  margin: 2rem;
+  border: 2px solid black;
+  display: flex;
+}
+
+.projectsCard img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projectsAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  border: 2px solid black;
+}
+
+.projectsAside a {
+  color: var(--color-disable);
+  z-index: -1;
+}
+
+.projectsAside a:hover {
+  color: black;
+}
+
+/* Contacto */
+.contact {
+  padding-top: 2rem;
+}
+
+.contact h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+  margin-bottom: 2rem;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contactAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.contactAside a {
+  color: var(--color-disable);
+}
+
+.contactAside a:hover {
+  color: black;
+}
+
+.contactContainer form {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+.contactContainer form .contactInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.contactContainer form .contactInputs2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contactBtn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
+  background-color: var(--color-disable);
+}
+
+.contactBtn:hover {
+  background-color: black;
+  color: var(--color-hover);
+}
+
+/* Footer */
+
+footer {
+  height: 8vh;
+  background-color: black;
+  margin-top: 2rem;
+}
+
+.footContainer {
+  display: none;
+}
+
+/* Biografia */
+.biography h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+  padding-top: 2rem;
+}
+
+.bioContainer {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "img1"
+    "text1"
+    "text2"
+    "img2"
+    "text3";
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+.bioContainer p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-style: oblique;
+}
+
+.bioContainer .bioImg1,
+.bioImg2 {
+  margin-top: 0.2rem;
+  width: 100%;
+  max-height: 60vh;
+}
+
+.bioImg1 {
+  grid-area: img1;
+}
+.bioText1 {
+  grid-area: text1;
+}
+.bioText2 {
+  grid-area: text2;
+}
+.bioText3 {
+  grid-area: text3;
+}
+.bioImg2 {
+  grid-area: img2;
+}
+
+/* Formaciones */
+.training h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique;
+  padding-top: 2rem;
+}
+
+/* Medias */
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80vw;
+    margin: 1.75rem auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* Formaciones */
+  .trainingMain {
+    height: 78vh;
+  }
+  .training h2 {
+    font-size: 3rem;
+  }
+  /* Generales */
+  body {
+    padding-top: 4rem;
+  }
+  /* NavBar */
+  .logoS img {
+    width: 9rem;
+  }
+
+  .navbarS {
+    height: 5rem;
+  }
+  .menuNav {
+    display: flex;
+    flex-direction: row;
+  }
+  .menuNav .list {
+    border: none;
+  }
+  .menuNav .list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px;
+    border-radius: 20px;
+    width: max-content;
+    font-size: 1.3rem;
+  }
+  .menuNav .list a:hover {
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+    transition: 0.5s;
+  }
+  /* Inicio */
+  .homeContainer {
+    grid-template-areas:
+      "homeImg homeTxt"
+      "homeImg homeBtn";
+    gap: 1rem;
+  }
+  .homeImg {
+    width: 325px;
+    height: 650px;
+  }
+  .homeTxt {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .homeTxt h1 {
+    font-size: 5rem;
+  }
+  .homeTxt p {
+    font-size: 1.5rem;
+  }
+  .homeBtn {
+    margin-top: 0;
+    font-size: 1.5rem;
+    width: 20rem;
+    align-self: center;
+    justify-self: center;
+  }
+  .homeArrow a {
+    color: var(--color-disable);
+  }
+  .homeArrow {
+    display: inline-block;
+    position: relative;
+    font-size: 3rem;
+    right: -48%;
+    top: -50px;
+    padding: 10px;
+    animation: bounce 2s ease-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    5% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    15% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-50%);
+    }
+    40% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-30%);
+    }
+    70% {
+      transform: translateY(0%);
+    }
+    80% {
+      transform: translateY(-15%);
+    }
+    90% {
+      transform: translateY(0%);
+    }
+    95% {
+      transform: translateY(-7%);
+    }
+    97% {
+      transform: translateY(0%);
+    }
+    99% {
+      transform: translateY(-3%);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* Sobre Mi */
+  .aboutMe h2 {
+    font-size: 3rem;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "aboutText aboutText aboutImg";
+    gap: 0px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutText {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .aboutBtn {
+    font-size: 1.2rem;
+  }
+  .aboutImg {
+    margin: 0;
+    width: 350px;
+    height: 300px;
+    align-self: center;
+    box-shadow: 2px 1px 0 10px;
+  }
+  /* Habilidades y experiencias */
+  .skills h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  .skillsContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .skillsExp {
+    margin: 0;
+    border-left: 1px solid black;
+  }
+  .skillsFormaciones {
+    font-size: larger;
+  }
+  /* Proyectos */
+  .projects h2 {
+    font-size: 3rem;
+  }
+  .projectsContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  /* Contacto */
+  .contactAside {
+    display: none;
+  }
+  .contact h4 {
+    font-size: 3rem;
+  }
+  .contactContainer form {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .contactContainer form .contactInputs {
+    gap: 5rem;
+  }
+  .contactContainer form .contactInputs input {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.2rem;
+  }
+  .contactContainer form .contactInputs2 textarea {
+    width: 20rem;
+  }
+  .contactBtn {
+    font-size: 1.3rem;
+  }
+  footer {
+    height: 12vh;
+  }
+  .footContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .footTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgba(245, 245, 245, 0.815);
+  }
+  .footContact ul {
+    margin-top: 1.5rem;
+    list-style: none;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footContact ul li a {
+    color: rgba(245, 245, 245, 0.815);
+  }
+  .footContact ul li a span {
+    margin: 0 auto;
+  }
+  /* Biografia */
+  .biography h2 {
+    font-size: 3rem;
+  }
+  .bioContainer {
+    height: 60vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "img1 text1"
+      "text2 text2"
+      "text3 img2";
+  }
+  .bioContainer .bioImg1,
+  .bioImg2 {
+    max-width: 95%;
+    max-height: 40vh;
+  }
+  .bioContainer p {
+    padding: 1rem;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .homeArrow {
+    top: -55px;
+    font-size: 4rem;
+  }
+  /* Footer */
+  footer {
+    height: 20vh;
+  }
+  /* Formaciones */
+  .trainingMain {
+    height: 74vh;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* Formaciones */
+  .trainingMain {
+    height: 70vh;
+  }
+  /* Inicio */
+  .homeContainer img {
+    width: 375px;
+    height: 700px;
+  }
+  .homeTxt h1 {
+    font-size: 7rem;
+  }
+  .homeTxt p {
+    font-size: 2rem;
+  }
+  .homeBtn {
+    font-size: 2rem;
+  }
+  .homeArrow {
+    font-size: 5rem;
+  }
+  /* Sobre Mi */
+  .aboutImg {
+    width: 100%;
+    height: auto;
+  }
+  .aboutText {
+    height: 100%;
+    font-size: 1.5rem;
+  }
+  .aboutBtn {
+    font-size: 1.5rem;
+  }
+  /* Contacto */
+  .contact .contactContainer form .contactInputs2 .iptArea {
+    width: 35rem;
+  }
+  .contact .contactContainer form .contactInputs {
+    align-self: flex-start;
+  }
+  /* footer */
+  .footTxt {
+    font-size: 3rem;
+  }
+  .footContact ul {
+    font-size: 4rem;
+  }
+  /* Biografia */
+  .bioContainer {
+    height: 58.5vh;
+    overflow-x: hidden;
+  }
+  .bioContainer .bioImg1,
+  .bioImg2 {
+    max-width: 90%;
+    justify-self: center;
+  }
+}
