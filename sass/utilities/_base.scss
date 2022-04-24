@@ -1,0 +1,27 @@
+/* Variables */
+$color-disable: rgb(69, 79, 88);
+$color-hover: rgba(245, 245, 245, 0.815);
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* General */
+html {
+    scroll-behavior: smooth;
+    body {
+      font-family: "Mukta", sans-serif;
+      background-color: rgba(238, 237, 237, 0.411);
+      padding-top: 3rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+// Medias
+@media only screen and (min-width: 992px) {
+    body {
+      padding-top: 4rem;
+    }
+  }
