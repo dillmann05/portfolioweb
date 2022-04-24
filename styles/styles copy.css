@@ -171,7 +171,6 @@ body a {
 }
 
 .aboutMe h2 {
-  margin-top: 2rem;
   text-align: center;
   font-size: 2rem;
   font-weight: bolder;
@@ -242,7 +241,6 @@ body a {
 }
 
 .skills h2 {
-  margin-top: 2rem;
   text-align: center;
   font-size: 2rem;
   font-weight: bolder;
@@ -267,7 +265,7 @@ body a {
 .skillsIco {
   font-size: 5rem;
   text-align: center;
-  
+  z-index: -1;
 }
 
 .skillsFormaciones {
@@ -279,16 +277,12 @@ body a {
 .skillsExp {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin-top: 3rem;
 }
 
-.skillsExp .skillsTxt li{
-  margin-bottom: 4rem;
-}
-
-.skillsExp .skillsTxt li h3 {
+.skillsExp h3 {
   font-weight: bold;
 }
 
@@ -300,12 +294,15 @@ body a {
   top: -1rem;
   right: -2rem;
   font-size: 5rem;
+  color: black;
+  z-index: -1;
 }
 
 .skillsArrow ion-icon {
   position: relative;
   top: 10rem;
   right: 1.7rem;
+  z-index: -1;
 }
 
 /* Proyectos */
@@ -314,7 +311,6 @@ body a {
 }
 
 .projects h2 {
-  margin-top: 2rem;
   text-align: center;
   font-size: 2rem;
   font-weight: bolder;
@@ -350,6 +346,7 @@ body a {
 
 .projectsAside a {
   color: var(--color-disable);
+  z-index: -1;
 }
 
 .projectsAside a:hover {
@@ -547,7 +544,7 @@ footer {
   }
   /* NavBar */
   .logoS img {
-    width: 9.5rem;
+    width: 9rem;
   }
 
   .navbarS {
@@ -556,7 +553,6 @@ footer {
   .menuNav {
     display: flex;
     flex-direction: row;
-    margin-right: 8rem;
   }
   .menuNav .list {
     border: none;
@@ -569,7 +565,7 @@ footer {
     padding: 5px;
     border-radius: 20px;
     width: max-content;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .menuNav .list a:hover {
     color: white;
@@ -590,16 +586,16 @@ footer {
   }
   .homeTxt {
     padding: 0;
+    justify-content: space-evenly;
   }
   .homeTxt h1 {
     font-size: 5rem;
   }
   .homeTxt p {
     font-size: 1.5rem;
-    word-spacing: 2px;
   }
   .homeBtn {
-    margin-top: -280px;
+    margin-top: 0;
     font-size: 1.5rem;
     width: 20rem;
     align-self: center;
@@ -611,7 +607,7 @@ footer {
   .homeArrow {
     display: inline-block;
     position: relative;
-    font-size: 4rem;
+    font-size: 3rem;
     right: -48%;
     top: -50px;
     padding: 10px;
@@ -681,7 +677,6 @@ footer {
     font-size: 1.2rem;
   }
   .aboutBtn {
-    margin-top: 2rem;
     font-size: 1.2rem;
   }
   .aboutImg {
@@ -723,27 +718,22 @@ footer {
     font-size: 3rem;
   }
   .contactContainer form {
-    height: 55vh;
     flex-direction: row;
     gap: 3rem;
   }
   .contactContainer form .contactInputs {
-    margin-top: 7rem;
-    width: 20rem;
     gap: 5rem;
   }
   .contactContainer form .contactInputs input {
     height: 3rem;
     width: 15rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .contactContainer form .contactInputs2 textarea {
     width: 20rem;
-    font-size: 1.5rem;
   }
   .contactBtn {
-    font-size: 1.5rem;
-    width: 100%;
+    font-size: 1.3rem;
   }
   footer {
     height: 12vh;
@@ -809,6 +799,7 @@ footer {
 @media only screen and (min-width: 1200px) {
   .homeArrow {
     top: -55px;
+    font-size: 4rem;
   }
   /* Footer */
   footer {
@@ -824,10 +815,6 @@ footer {
   /* Formaciones */
   .trainingMain {
     height: 70vh;
-  }
-  /* Nav */
-  .menuNav .list a{
-    font-size: 1.5rem;
   }
   /* Inicio */
   .homeContainer img {
@@ -857,33 +844,6 @@ footer {
   }
   .aboutBtn {
     font-size: 1.5rem;
-  }
-
-  /* Habilidades y Experiencias */
-  .skillsIco {
-    font-size: 8rem;  
-  }
-  .skillsFormaciones {
-    font-size: 2rem;
-    margin-left: 6rem;
-  }
-  .skillsExp h3 {
-    font-size: 2rem;
-  }
-  .skillsArrow {
-    width: 1.5rem;
-    height: 20rem;
-    position: relative;
-    top: -1rem;
-    right: -2rem;
-    font-size: 5rem;
-    color: black;
-    z-index: -1;
-  }
-  .skillsArrow ion-icon {
-    position: relative;
-    top: 18rem;
-    right: 1.7rem;
   }
   /* Contacto */
   .contact .contactContainer form .contactInputs2 .iptArea {

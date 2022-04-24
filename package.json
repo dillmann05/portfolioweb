@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Porftfolio web Enzo Dillmann",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss sass/styles.scss styles/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillmann05/portfolioweb.git"
+  },
+  "keywords": [
+    "Enzo",
+    "Dillmann",
+    "HTML",
+    "CSS",
+    "JS",
+    "JavaScript",
+    "Desarrollador",
+    "Desarrollador",
+    "Web",
+    "Web",
+    "GitHub",
+    "Portfolio",
+    "Curriculum",
+    "Front-End",
+    "Contacto",
+    "Contactame",
+    "Bootstrap",
+    "SASS",
+    "NodeJS",
+    "Developer"
+  ],
+  "author": "Enzo Dillmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dillmann05/portfolioweb/issues"
+  },
+  "homepage": "https://github.com/dillmann05/portfolioweb#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
