@@ -83,7 +83,8 @@ html {
     .trainingMain .training {
       padding-top: 2rem; }
       .trainingMain .training h2 {
-        font-size: 3rem; } }
+        font-size: 5rem;
+        padding: 2rem; } }
 
 .H2, body .aboutMe h2, body .skills h2, body .projects h2, body .contact h4 {
   margin-top: 2rem;
