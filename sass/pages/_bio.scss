@@ -1,0 +1,50 @@
+.biography{
+    h2{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        font-style: oblique;
+        padding-top: 2rem;
+    }
+    .bioContainer{
+        height: 70vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+          "img1"
+          "text1"
+          "text2"
+          "img2"
+          "text3";
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid black;
+        overflow: scroll;
+        p{
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            font-style: oblique;
+        }
+        .bioText1 {
+            grid-area: text1;
+          }
+          .bioText2 {
+            grid-area: text2;
+          }
+          .bioText3 {
+            grid-area: text3;
+          }
+        .bioImg1{
+            margin-top: 0.2rem;
+            width: 100%;
+            max-height: 60vh;
+            grid-area: img1;
+        }
+        .bioImg2{
+            @extend .bioImg1;
+            grid-area: img2;
+        }
+    }
+}
