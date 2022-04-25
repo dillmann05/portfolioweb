@@ -15,10 +15,6 @@ html {
     html body a {
       text-decoration: none; }
 
-@media only screen and (min-width: 992px) {
-  body {
-    padding-top: 4rem; } }
-
 .biography h2 {
   text-align: center;
   font-size: 2rem;
@@ -55,6 +51,23 @@ html {
   .biography .bioContainer .bioImg2 {
     grid-area: img2; }
 
+@media (min-width: 992px) {
+  .biography {
+    padding-top: 2rem; }
+    .biography h2 {
+      font-size: 3rem; }
+    .biography .bioContainer {
+      height: 60vh;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "img1 text1" "text2 text2" "text3 img2"; }
+      .biography .bioContainer .bioImg1, .biography .bioContainer .bioImg2, .biography .bioContainer .bioImg2 {
+        max-width: 95%;
+        max-height: 40vh; }
+      .biography .bioContainer p {
+        padding: 1rem;
+        align-self: center; } }
+
 .training h2 {
   text-align: center;
   font-size: 2rem;
@@ -63,14 +76,50 @@ html {
   font-style: oblique;
   padding-top: 2rem; }
 
-.navbarS {
+@media (min-width: 992px) {
+  .trainingMain {
+    height: 91vh; }
+    .trainingMain .training {
+      padding-top: 2rem; }
+      .trainingMain .training h2 {
+        font-size: 3rem; } }
+
+.H2, body .aboutMe h2, body .skills h2, body .projects h2, body .contact h4 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-style: oblique; }
+
+.btns, body .home .homeContainer .homeBtn, body .aboutMe .aboutContainer .aboutText .aboutBtn, body .contact .contactContainer form .contactInputs2 .contactBtn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
+  background-color: #454f58; }
+
+body .navbarS {
   position: fixed;
   width: 100%;
   top: 0;
   background-color: white;
   box-shadow: 0 0.5px 25px;
   z-index: 10; }
-  .navbarS .menuNav {
+  body .navbarS .menuNav {
     width: 100%;
     padding-top: 1.5rem;
     display: flex;
@@ -79,20 +128,20 @@ html {
     align-items: center;
     gap: 1rem;
     list-style: none; }
-    .navbarS .menuNav .list {
+    body .navbarS .menuNav .list {
       display: flex;
       justify-content: center;
       border-bottom: 1px solid black; }
-      .navbarS .menuNav .list a {
+      body .navbarS .menuNav .list a {
         color: #454f58;
         font-size: 1.5rem;
         margin: 0.5rem; }
-        .navbarS .menuNav .list a:hover {
+        body .navbarS .menuNav .list a:hover {
           color: black; }
 
-.home {
+body .home {
   padding-top: 3rem; }
-  .home .homeContainer {
+  body .home .homeContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, auto);
@@ -100,12 +149,12 @@ html {
     padding: 2rem;
     gap: 2rem;
     justify-content: center; }
-    .home .homeContainer .homeImg {
+    body .home .homeContainer .homeImg {
       grid-area: homeImg;
       border: 1px solid white;
       box-shadow: -8px 10px;
       margin: 0 auto; }
-    .home .homeContainer .homeTxt {
+    body .home .homeContainer .homeTxt {
       grid-area: homeTxt;
       padding: 0.4rem;
       display: flex;
@@ -113,65 +162,39 @@ html {
       justify-content: center;
       align-items: center;
       gap: 1rem; }
-      .home .homeContainer .homeTxt h1 {
+      body .home .homeContainer .homeTxt h1 {
         font-size: 2.5rem;
         font-weight: bold;
         letter-spacing: 1px; }
-      .home .homeContainer .homeTxt p {
+      body .home .homeContainer .homeTxt p {
         letter-spacing: 0.5px; }
-    .home .homeContainer .homeBtn {
-      display: inline-block;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #212529;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-      background-color: transparent;
-      border: 1px solid transparent;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      border-radius: 0.25rem;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    body .home .homeContainer .homeBtn {
       grid-area: homeBtn;
-      color: white;
-      background-color: #454f58;
       margin-top: 1rem; }
-      .home .homeContainer .homeBtn:hover {
+      body .home .homeContainer .homeBtn:hover {
         color: rgba(245, 245, 245, 0.815);
         background-color: black;
         border: 2px solid #454f58; }
-    .home .homeContainer .modal .modal-dialog .modal-content .modal-body .iframeCV {
+    body .home .homeContainer .modal .modal-dialog .modal-content .modal-body .iframeCV {
       width: 100%;
       height: 70vh; }
-    .home .homeContainer .modal .modal-dialog .modal-content .modal-footer .btnModal {
+    body .home .homeContainer .modal .modal-dialog .modal-content .modal-footer .btnModal {
       background-color: #454f58;
       color: white; }
 
-.homeArrow {
+body .homeArrow {
   display: none; }
 
-.aboutMe {
+body .aboutMe {
   padding-top: 3.5rem; }
-  .aboutMe h2 {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    font-style: oblique; }
-  .aboutMe .aboutContainer {
+  body .aboutMe .aboutContainer {
     display: grid;
     grid-template-columns: 1fr;
     grid-row: 1fr 1fr;
     grid-template-areas: "aboutImg" "aboutText";
     gap: 1rem;
     padding: 1rem; }
-    .aboutMe .aboutContainer .aboutText {
+    body .aboutMe .aboutContainer .aboutText {
       grid-area: aboutText;
       padding: 0.8rem;
       display: flex;
@@ -179,80 +202,88 @@ html {
       justify-content: center;
       align-items: center;
       border: 1px solid black; }
-      .aboutMe .aboutContainer .aboutText p {
+      body .aboutMe .aboutContainer .aboutText p {
         margin-top: 1rem;
         letter-spacing: 1px;
         font-style: oblique; }
-        .aboutMe .aboutContainer .aboutText p::first-letter {
+        body .aboutMe .aboutContainer .aboutText p::first-letter {
           font-size: 2rem;
           font-weight: bold; }
-      .aboutMe .aboutContainer .aboutText .aboutBtn {
-        display: inline-block;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        border: 1px solid transparent;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        border-radius: 0.25rem;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        background-color: #454f58;
-        color: white;
+      body .aboutMe .aboutContainer .aboutText .aboutBtn {
         border-radius: 50px;
         align-self: end;
         margin-right: 1rem; }
-        .aboutMe .aboutContainer .aboutText .aboutBtn:hover {
+        body .aboutMe .aboutContainer .aboutText .aboutBtn:hover {
           background-color: black;
           color: rgba(245, 245, 245, 0.815); }
-    .aboutMe .aboutContainer .aboutImg {
+    body .aboutMe .aboutContainer .aboutImg {
       grid-area: aboutImg;
       margin: 0 auto;
       box-shadow: 1px 2px 0 10px; }
 
-.skills {
+body .skills {
   padding-top: 3.5rem; }
-  .skills h2 {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    font-style: oblique; }
-  .skills .skillsContainer {
+  body .skills .skillsContainer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     margin-top: 2rem; }
-    .skills .skillsContainer .skillsIcons {
+    body .skills .skillsContainer .skillsIcons {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr; }
-      .skills .skillsContainer .skillsIcons .skillsIco {
+      body .skills .skillsContainer .skillsIcons .html {
         font-size: 5rem;
         text-align: center; }
-      .skills .skillsContainer .skillsIcons .skillsFormaciones {
+        body .skills .skillsContainer .skillsIcons .html:hover {
+          color: #f06529;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .css {
+        font-size: 5rem;
+        text-align: center; }
+        body .skills .skillsContainer .skillsIcons .css:hover {
+          color: #2965f1;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .js {
+        font-size: 5rem;
+        text-align: center; }
+        body .skills .skillsContainer .skillsIcons .js:hover {
+          color: #f0db4f;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .git {
+        font-size: 5rem;
+        text-align: center; }
+        body .skills .skillsContainer .skillsIcons .git:hover {
+          color: black;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .figma {
+        font-size: 5rem;
+        text-align: center; }
+        body .skills .skillsContainer .skillsIcons .figma:hover {
+          color: #0cb47c;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .node {
+        font-size: 5rem;
+        text-align: center; }
+        body .skills .skillsContainer .skillsIcons .node:hover {
+          color: #3c873a;
+          transition-delay: .15s; }
+      body .skills .skillsContainer .skillsIcons .skillsFormaciones {
         font-size: 1rem;
         margin-left: 1rem;
         text-align: center; }
-    .skills .skillsContainer .skillsExp {
+    body .skills .skillsContainer .skillsExp {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-evenly;
       align-items: center;
       margin-top: 3rem; }
-      .skills .skillsContainer .skillsExp .skillsTxt li {
+      body .skills .skillsContainer .skillsExp .skillsTxt li {
         margin-bottom: 4rem; }
-        .skills .skillsContainer .skillsExp .skillsTxt li h3 {
+        body .skills .skillsContainer .skillsExp .skillsTxt li h3 {
           font-weight: bold; }
-      .skills .skillsContainer .skillsExp .skillsArrow {
+      body .skills .skillsContainer .skillsExp .skillsArrow {
         background-color: black;
         width: 1.5rem;
         height: 13rem;
@@ -260,57 +291,48 @@ html {
         top: -1rem;
         right: -2rem;
         font-size: 5rem; }
-        .skills .skillsContainer .skillsExp .skillsArrow ion-icon {
+        body .skills .skillsContainer .skillsExp .skillsArrow ion-icon {
           color: black;
           position: relative;
           top: 10rem;
           right: 1.7rem; }
 
-.projects {
+body .projects {
   padding-top: 3.5rem; }
-  .projects h2 {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    font-style: oblique;
-    margin-bottom: 1rem; }
-  .projects .projectsContainer {
+  body .projects .projectsContainer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr; }
-    .projects .projectsContainer .projectsCard {
+    body .projects .projectsContainer .projectsCard {
       margin: 2rem;
       border: 2px solid black;
       display: flex; }
-      .projects .projectsContainer .projectsCard img {
+      body .projects .projectsContainer .projectsCard img {
         width: 100%;
         overflow: hidden; }
-      .projects .projectsContainer .projectsCard .projectsAside {
+      body .projects .projectsContainer .projectsCard .projectsAside {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         font-size: 2rem;
         border: 2px solid black; }
-        .projects .projectsContainer .projectsCard .projectsAside a {
+        body .projects .projectsContainer .projectsCard .projectsAside .earth {
           color: #454f58; }
-          .projects .projectsContainer .projectsCard .projectsAside a:hover {
-            color: black; }
+          body .projects .projectsContainer .projectsCard .projectsAside .earth:hover {
+            color: #4285F4;
+            transition-delay: .15s; }
+        body .projects .projectsContainer .projectsCard .projectsAside .gith {
+          color: #454f58; }
+          body .projects .projectsContainer .projectsCard .projectsAside .gith:hover {
+            color: black;
+            transition-delay: .15s; }
 
-.contact {
+body .contact {
   padding-top: 2rem; }
-  .contact h4 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    font-style: oblique;
-    margin-bottom: 2rem; }
-  .contact .contactContainer {
+  body .contact .contactContainer {
     display: flex;
     justify-content: center; }
-    .contact .contactContainer .contactAside {
+    body .contact .contactContainer .contactAside {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -319,11 +341,27 @@ html {
       font-size: 2rem;
       border: 2px solid black;
       padding: 1rem; }
-      .contact .contactContainer .contactAside a {
+      body .contact .contactContainer .contactAside .gmail {
         color: #454f58; }
-        .contact .contactContainer .contactAside a:hover {
-          color: black; }
-    .contact .contactContainer form {
+        body .contact .contactContainer .contactAside .gmail:hover {
+          color: #4285F4;
+          transition-delay: .15s; }
+      body .contact .contactContainer .contactAside .linkedin {
+        color: #454f58; }
+        body .contact .contactContainer .contactAside .linkedin:hover {
+          color: #0A66C2;
+          transition-delay: .15s; }
+      body .contact .contactContainer .contactAside .twitter {
+        color: #454f58; }
+        body .contact .contactContainer .contactAside .twitter:hover {
+          color: #1D9BF0;
+          transition-delay: .15s; }
+      body .contact .contactContainer .contactAside .ig {
+        color: #454f58; }
+        body .contact .contactContainer .contactAside .ig:hover {
+          color: #E1306C;
+          transition-delay: .15s; }
+    body .contact .contactContainer form {
       width: 70vw;
       display: flex;
       flex-direction: column;
@@ -332,42 +370,294 @@ html {
       gap: 1rem;
       padding: 0.5rem;
       border: 2px solid black; }
-      .contact .contactContainer form .contactInputs {
+      body .contact .contactContainer form .contactInputs {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         padding: 0.5rem; }
-      .contact .contactContainer form .contactInputs2 {
+      body .contact .contactContainer form .contactInputs2 {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         align-items: center; }
-        .contact .contactContainer form .contactInputs2 .contactBtn {
-          display: inline-block;
-          font-weight: 400;
-          line-height: 1.5;
-          color: #212529;
-          text-align: center;
-          text-decoration: none;
-          vertical-align: middle;
-          cursor: pointer;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-          border: 1px solid transparent;
-          padding: 0.375rem 0.75rem;
-          font-size: 1rem;
-          border-radius: 0.25rem;
-          transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-          color: white;
-          background-color: #454f58; }
-          .contact .contactContainer form .contactInputs2 .contactBtn:hover {
-            background-color: black;
-            color: rgba(245, 245, 245, 0.815); }
+        body .contact .contactContainer form .contactInputs2 textarea {
+          resize: none; }
+        body .contact .contactContainer form .contactInputs2 .contactBtn:hover {
+          background-color: black;
+          color: rgba(245, 245, 245, 0.815); }
 
-footer {
+body footer {
   height: 8vh;
   background-color: black;
   margin-top: 2rem; }
-  footer .footContainer {
+  body footer .footContainer {
     display: none; }
+
+@media (min-width: 576px) {
+  .home .homeContainer .homeImg {
+    width: 80%; }
+  .aboutMe .aboutContainer .aboutImg {
+    width: 70%; }
+  .modal-dialog {
+    max-width: 80vw;
+    margin: 1.75rem auto; } }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 4rem; }
+    body .navbarS {
+      height: 5rem; }
+      body .navbarS .logoS img {
+        width: 9.5rem; }
+      body .navbarS .menuNav {
+        display: flex;
+        flex-direction: row;
+        margin-right: 8rem; }
+        body .navbarS .menuNav .list {
+          border: none; }
+          body .navbarS .menuNav .list a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 5px;
+            border-radius: 20px;
+            width: max-content;
+            font-size: 1.4rem; }
+            body .navbarS .menuNav .list a:hover {
+              color: white;
+              background-color: black;
+              font-size: 1.5rem;
+              transition: 0.5s; }
+    body .home .homeContainer {
+      grid-template-areas: "homeImg homeTxt" "homeImg homeBtn";
+      gap: 1rem; }
+      body .home .homeContainer .homeImg {
+        width: 325px;
+        height: 650px; }
+      body .home .homeContainer .homeTxt {
+        padding: 0; }
+        body .home .homeContainer .homeTxt h1 {
+          font-size: 5rem; }
+        body .home .homeContainer .homeTxt p {
+          font-size: 1.5rem;
+          word-spacing: 2px; }
+      body .home .homeContainer .homeBtn {
+        margin-top: -280px;
+        font-size: 1.5rem;
+        width: 20rem;
+        align-self: center;
+        justify-self: center; }
+    body .home .homeArrow {
+      display: inline-block;
+      position: relative;
+      font-size: 4rem;
+      right: -48%;
+      top: -50px;
+      padding: 10px;
+      animation: bounce 2s ease-out;
+      animation-iteration-count: infinite; }
+      body .home .homeArrow a {
+        color: #454f58; }
+  @keyframes bounce {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0; }
+    5% {
+      transform: translateY(-100%);
+      opacity: 0; }
+    15% {
+      transform: translateY(0); }
+    30% {
+      transform: translateY(-50%); }
+    40% {
+      transform: translateY(0%); }
+    50% {
+      transform: translateY(-30%); }
+    70% {
+      transform: translateY(0%); }
+    80% {
+      transform: translateY(-15%); }
+    90% {
+      transform: translateY(0%); }
+    95% {
+      transform: translateY(-7%); }
+    97% {
+      transform: translateY(0%); }
+    99% {
+      transform: translateY(-3%); }
+    100% {
+      transform: translateY(0);
+      opacity: 1; } }
+    body .aboutMe h2 {
+      font-size: 3rem; }
+    body .aboutMe .aboutContainer {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "aboutText aboutText aboutImg";
+      gap: 0px;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center; }
+      body .aboutMe .aboutContainer .aboutText {
+        width: 100%;
+        font-size: 1.2rem; }
+        body .aboutMe .aboutContainer .aboutText .aboutBtn {
+          margin-top: 2rem;
+          font-size: 1.2rem; }
+      body .aboutMe .aboutContainer .aboutImg {
+        margin: 0;
+        width: 350px;
+        height: 300px;
+        align-self: center;
+        box-shadow: 2px 1px 0 10px; }
+    body .skills h2 {
+      font-size: 3rem;
+      margin-bottom: 4rem; }
+    body .skills .skillsContainer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr; }
+      body .skills .skillsContainer .skillsExp {
+        margin: 0;
+        border-left: 1px solid black; }
+      body .skills .skillsContainer .skillsFormaciones {
+        font-size: larger; }
+    body .projects h2 {
+      font-size: 3rem; }
+    body .projects .projectsContainer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; }
+    body .contact h4 {
+      font-size: 3rem;
+      margin-bottom: 2.5rem; }
+    body .contact .contactContainer .contactAside {
+      display: none; }
+    body .contact .contactContainer form {
+      height: 60vh;
+      flex-direction: row;
+      gap: 3rem; }
+      body .contact .contactContainer form .contactInputs {
+        margin-top: -5rem;
+        margin-left: 3rem;
+        width: 20rem;
+        gap: 5rem; }
+        body .contact .contactContainer form .contactInputs input {
+          height: 3rem;
+          width: 15rem;
+          font-size: 1.3rem; }
+      body .contact .contactContainer form .contactInputs2 {
+        margin-right: 4rem; }
+        body .contact .contactContainer form .contactInputs2 textarea {
+          width: 20rem;
+          font-size: 1.5rem; }
+        body .contact .contactContainer form .contactInputs2 .contactBtn {
+          font-size: 1.5rem;
+          width: 100%; }
+    body footer {
+      height: 12vh; }
+      body footer .footContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%; }
+        body footer .footContainer .footTxt {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          color: rgba(245, 245, 245, 0.815); }
+        body footer .footContainer .footContact ul {
+          margin-top: 1.5rem;
+          list-style: none;
+          font-size: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem; }
+          body footer .footContainer .footContact ul li .gmail {
+            color: #454f58;
+            color: rgba(245, 245, 245, 0.815); }
+            body footer .footContainer .footContact ul li .gmail:hover {
+              color: #4285F4;
+              transition-delay: .15s; }
+          body footer .footContainer .footContact ul li .linkedin {
+            color: #454f58;
+            color: rgba(245, 245, 245, 0.815); }
+            body footer .footContainer .footContact ul li .linkedin:hover {
+              color: #0A66C2;
+              transition-delay: .15s; }
+          body footer .footContainer .footContact ul li .twitter {
+            color: #454f58;
+            color: rgba(245, 245, 245, 0.815); }
+            body footer .footContainer .footContact ul li .twitter:hover {
+              color: #1D9BF0;
+              transition-delay: .15s; }
+          body footer .footContainer .footContact ul li .ig {
+            color: #454f58;
+            color: rgba(245, 245, 245, 0.815); }
+            body footer .footContainer .footContact ul li .ig:hover {
+              color: #E1306C;
+              transition-delay: .15s; } }
+
+@media (min-width: 1400px) {
+  body .navbarS .menuNav .list a {
+    font-size: 1.5rem; }
+  body .home .homeContainer .homeImg {
+    width: 375px;
+    height: 650px; }
+  body .home .homeContainer .homeTxt h1 {
+    font-size: 7rem; }
+  body .home .homeContainer .homeTxt p {
+    font-size: 2rem; }
+  body .home .homeContainer .homeBtn {
+    font-size: 2.2rem; }
+  body .home .homeArrow {
+    font-size: 5rem;
+    top: -55px; }
+  body .aboutMe h2 {
+    font-size: 5rem;
+    padding-top: 1.6rem; }
+  body .aboutMe .aboutContainer .aboutImg {
+    width: 95%;
+    height: auto; }
+  body .aboutMe .aboutContainer .aboutText {
+    height: 100%;
+    font-size: 1.9rem; }
+    body .aboutMe .aboutContainer .aboutText .aboutBtn {
+      font-size: 1.7rem; }
+  body .skills h2 {
+    font-size: 4rem; }
+  body .skills .skillsContainer .skillsIcons .skillsIco {
+    font-size: 8rem; }
+  body .skills .skillsContainer .skillsIcons .skillsFormaciones {
+    font-size: 1.5rem;
+    margin-left: 6rem; }
+  body .skills .skillsContainer .skillsExp .skillsTxt ul li h3 {
+    font-size: 3rem; }
+  body .skills .skillsContainer .skillsExp .skillsArrow {
+    width: 1.5rem;
+    height: 20rem;
+    position: relative;
+    top: -1rem;
+    right: -2rem;
+    font-size: 5rem;
+    color: black; }
+    body .skills .skillsContainer .skillsExp .skillsArrow ion-icon {
+      position: relative;
+      top: 18rem;
+      right: 1.7rem; }
+  body .projects h2 {
+    font-size: 5rem;
+    padding-top: 1.6rem; }
+  body .contact h4 {
+    font-size: 5rem;
+    padding-top: 1.6rem; }
+  body .contact .contactContainer form .contactInputs2 .iptArea {
+    width: 45rem; }
+  body footer {
+    height: 12vh; }
+    body footer .footContainer .footTxt {
+      font-size: 2.2rem; }
+    body footer .footContainer .footContact ul {
+      font-size: 3rem; } }

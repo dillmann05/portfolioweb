@@ -48,3 +48,29 @@
         }
     }
 }
+
+@media (min-width:992px){
+  .biography{
+    padding-top: 2rem;
+    h2{
+      font-size: 3rem;
+    }
+    .bioContainer{
+      height: 60vh;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "img1 text1"
+        "text2 text2"
+        "text3 img2";
+        .bioImg1, .bioImg2{
+          max-width: 95%;
+          max-height: 40vh;
+        }
+        p{
+          padding: 1rem;
+          align-self: center;
+        }
+    }
+  }
+}

@@ -1,6 +1,16 @@
 /* Variables */
 $color-disable: rgb(69, 79, 88);
 $color-hover: rgba(245, 245, 245, 0.815);
+$html: #f06529;
+$css: #2965f1;
+$js: #f0db4f;
+$gith: black;
+$figma: #0cb47c;
+$node: #3c873a;
+$google:#4285F4;
+$linkedin:#0A66C2;
+$twitter:#1D9BF0;
+$ig:#E1306C;
 /* Reseteo */
 * {
     margin: 0;
@@ -17,11 +27,5 @@ html {
       a {
         text-decoration: none;
       }
-    }
-  }
-// Medias
-@media only screen and (min-width: 992px) {
-    body {
-      padding-top: 4rem;
     }
   }
