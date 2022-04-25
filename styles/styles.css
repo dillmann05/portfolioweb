@@ -25,14 +25,14 @@ html {
 
 .biography .bioContainer {
   height: 70vh;
+  overflow: scroll;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "img1" "text1" "text2" "img2" "text3";
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid black;
-  overflow: scroll; }
+  border: 1px solid black; }
   .biography .bioContainer p {
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -55,9 +55,10 @@ html {
   .biography {
     padding-top: 2rem; }
     .biography h2 {
-      font-size: 3rem; }
+      font-size: 5rem;
+      padding-top: 1.6rem; }
     .biography .bioContainer {
-      height: 60vh;
+      height: 100vh;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-template-areas: "img1 text1" "text2 text2" "text3 img2"; }
