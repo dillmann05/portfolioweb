@@ -316,6 +316,7 @@ body{
                     align-items: center;
                     textarea{
                         resize: none;
+                        width: 100%
                     }
                     .contactBtn{
                         @extend .btns;
@@ -404,7 +405,7 @@ body{
                 gap: 1rem;
                 .homeImg{
                     width: 325px;
-                    height: 650px;
+                    height: 425px;
                 }
                 .homeTxt{
                     padding: 0;
@@ -417,7 +418,7 @@ body{
                     }
                 }
                 .homeBtn{
-                    margin-top: -280px;
+                    margin-top: -100px;
                     font-size: 1.5rem;
                     width: 20rem;
                     align-self: center;
@@ -564,6 +565,7 @@ body{
                     .contactInputs2{
                         margin-right: 4rem;
                         textarea{
+                            height: 15rem;
                             width: 20rem;
                             font-size: 1.5rem;
                         }
@@ -576,7 +578,7 @@ body{
             }
         }
         footer{
-            height: 12vh;
+            height: 18vh;
             .footContainer{
                 display: flex;
                 justify-content: space-around;

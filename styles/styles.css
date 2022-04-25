@@ -383,7 +383,8 @@ body .contact {
         gap: 1rem;
         align-items: center; }
         body .contact .contactContainer form .contactInputs2 textarea {
-          resize: none; }
+          resize: none;
+          width: 100%; }
         body .contact .contactContainer form .contactInputs2 .contactBtn:hover {
           background-color: black;
           color: rgba(245, 245, 245, 0.815); }
@@ -436,7 +437,7 @@ body footer {
       gap: 1rem; }
       body .home .homeContainer .homeImg {
         width: 325px;
-        height: 650px; }
+        height: 425px; }
       body .home .homeContainer .homeTxt {
         padding: 0; }
         body .home .homeContainer .homeTxt h1 {
@@ -445,7 +446,7 @@ body footer {
           font-size: 1.5rem;
           word-spacing: 2px; }
       body .home .homeContainer .homeBtn {
-        margin-top: -280px;
+        margin-top: -100px;
         font-size: 1.5rem;
         width: 20rem;
         align-self: center;
@@ -550,13 +551,14 @@ body footer {
       body .contact .contactContainer form .contactInputs2 {
         margin-right: 4rem; }
         body .contact .contactContainer form .contactInputs2 textarea {
+          height: 15rem;
           width: 20rem;
           font-size: 1.5rem; }
         body .contact .contactContainer form .contactInputs2 .contactBtn {
           font-size: 1.5rem;
           width: 100%; }
     body footer {
-      height: 12vh; }
+      height: 18vh; }
       body footer .footContainer {
         display: flex;
         justify-content: space-around;
